@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Course Home — Victor Chavez</title>
+  <meta name="description" content="Course home page for WDD231 — responsive, accessible, and JavaScript-driven course cards." />
+  <meta name="author" content="Victor Andres Chavez Tuchez" />
+
+  <!-- Google Font: choose one family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS: small then large (large contains media queries) -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Defered JS files -->
+  <script defer src="scripts/navigation.js"></script>
+  <script defer src="scripts/date.js"></script>
+  <script defer src="scripts/course.js"></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="logo" href="#" aria-label="Homepage">
+        <!-- inline SVG placeholder -->
+        <img src="images/logo.jpg" alt="Site logo" width="48" height="48">
+        <span class="site-name">Victor Chavez</span>
+      </a>
+
+      <button id="navToggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="chamber.html">Chamber</a></li>
+          <li><a href="final.html">Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    <h1>Home</h1>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p class="about-text">
+        I'm a hard-working person. I like to be active in everything, and I always have a saying: "Nothing is impossible, only difficult things." For me, God will always come first, and I will always be grateful to my family for all the support they give me. I know God's plans are perfect, and I leave everything I do to His will. I'm an athlete and I love playing soccer every day for a few hours.
+      </p>
+    </section>
+
+    <section class="student-photo">
+      <h2>Student Photo</h2>
+      <img src="images/student-photo.jpg" alt="Student photo of Your Name" width="300" height="300">
+    </section>
+
+    <section class="certificate">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="controls" role="region" aria-label="Course filters">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="CSE" aria-pressed="false">CSE</button>
+        <button class="filter-btn" data-filter="WDD" aria-pressed="false">WDD</button>
+      </div>
+
+      <div id="course-list" class="course-list" aria-live="polite" aria-busy="false">
+        <!-- course cards populated by scripts/course.js -->
+      </div>
+
+      <div class="credits-summary" id="creditsSummary" aria-live="polite">
+        <!-- total credits inserted by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="social">
+        <a href="https://github.com/your-github-username" aria-label="GitHub profile" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/your-linkedin" aria-label="LinkedIn profile" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+
+      <p>
+        &copy; <span id="currentYear"></span> Your Name — Guatemala
+      </p>
+
+      <p id="lastModified">Last Modification: <span id="modifiedValue"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

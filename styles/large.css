@@ -1,0 +1,36 @@
+/* large.css - contains media queries for larger screens */
+@media (min-width:700px){
+  .header-inner{padding:1rem;align-items:center}
+  .primary-nav{display:block}
+  .primary-nav ul{flex-direction:row}
+  .primary-nav a{padding:.5rem 1rem}
+  .nav-toggle{display:none}
+
+  /* Two-column layout for main content */
+  .site-main{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:1rem;
+    align-items:start;
+  }
+  .about{order:1}
+  .student-photo{order:2}
+
+  /* certificate section full width under the two columns */
+  .certificate{grid-column: 1 / -1}
+
+  .course-list{grid-template-columns: repeat(3, 1fr)}
+}
+section:nth-child(odd) {
+  background: #ffffff;
+}
+section:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* even larger: more spacing */
+@media (min-width:1100px){
+  body{padding:2rem}
+  .header-inner, .site-main, .site-footer{max-width:1200px;margin:0 auto}
+  .course-list{grid-template-columns: repeat(4, 1fr)}
+}
