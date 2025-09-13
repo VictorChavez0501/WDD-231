@@ -1,0 +1,72 @@
+[
+  {
+    "name": "ABC Hardware",
+    "address": "Zona 1, 3a Calle 12-34, Ciudad de Guatemala, Guatemala",
+    "phone": "502-1234-5678",
+    "website": "https://abchardware.com",
+    "image": "abc-hardware.png",
+    "membership": 3,
+    "membershipIcon": "🥇",
+    "description": "Your local hardware and tools supplier."
+  },
+  {
+    "name": "City Cafe",
+    "address": "Zona 10, Avenida Reforma 15-60, Ciudad de Guatemala, Guatemala",
+    "phone": "502-2345-6789",
+    "website": "https://citycafe.com",
+    "image": "city-cafe.png",
+    "membership": 1,
+    "membershipIcon": "⭐",
+    "description": "Great coffee and fresh pastries."
+  },
+  {
+    "name": "Green Leaf Grocery",
+    "address": "Zona 4, 7a Avenida 23-45, Ciudad de Guatemala, Guatemala",
+    "phone": "502-3456-7890",
+    "website": "https://greenleafgrocery.com",
+    "image": "green-leaf.png",
+    "membership": 2,
+    "membershipIcon": "🥈",
+    "description": "Organic and fresh groceries daily."
+  },
+  {
+    "name": "Sunshine Fitness",
+    "address": "Zona 9, Boulevard Los Próceres 12-34, Ciudad de Guatemala, Guatemala",
+    "phone": "502-4567-8901",
+    "website": "https://sunshinefitness.com",
+    "image": "sunshine-fitness.png",
+    "membership": 3,
+    "membershipIcon": "🥇",
+    "description": "Gym and personal training for all ages."
+  },
+  {
+    "name": "Tech Solutions",
+    "address": "Zona 14, Calle Mariscal 8-90, Ciudad de Guatemala, Guatemala",
+    "phone": "502-5678-9012",
+    "website": "https://techsolutions.com",
+    "image": "tech-solutions.png",
+    "membership": 2,
+    "membershipIcon": "🥈",
+    "description": "IT services and tech consulting."
+  },
+  {
+    "name": "Elegant Florist",
+    "address": "Antigua Guatemala, Calle del Arco 10, Sacatepéquez, Guatemala",
+    "phone": "502-6789-0123",
+    "website": "https://elegantflorist.com",
+    "image": "elegant-florist.png",
+    "membership": 1,
+    "membershipIcon": "⭐",
+    "description": "Beautiful flowers for every occasion."
+  },
+  {
+    "name": "Happy Paws Pet Care",
+    "address": "Quetzaltenango, 5a Avenida 12-34, Quetzaltenango, Guatemala",
+    "phone": "502-7890-1234",
+    "website": "https://happypawspetcare.com",
+    "image": "happy-paws.png",
+    "membership": 3,
+    "membershipIcon": "🥇",
+    "description": "Pet grooming, daycare, and supplies."
+  }
+]

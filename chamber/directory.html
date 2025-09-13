@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Business directory for the Chamber of Commerce of Guatemala City.">
+  <meta name="author" content="Victor Chavez">
+
+  <title>Chamber Directory | Guatemala City</title>
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook Open Graph Meta -->
+  <meta property="og:title" content="Guatemala City Chamber of Commerce Directory">
+  <meta property="og:description" content="Directorio de empresas locales en Guatemala City.">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Guatemala City Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+
+    <div class="view-toggle" id="view-toggle" role="region" aria-label="Opciones de vista">
+      <button id="gridView" aria-pressed="true" title="Ver en cuadrícula">Grid View</button>
+      <button id="listView" aria-pressed="false" title="Ver en lista">List View</button>
+    </div>
+
+    <section id="members" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>Contact: info@guatemalachamber.org</p>
+    <p>&copy; <span id="year"></span> Victor Chavez | WDD 231 | <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

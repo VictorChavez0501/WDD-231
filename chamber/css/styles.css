@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: #f8f9fa;
+}
+
+header {
+  background: #004466;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer {
+  background: #004466;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+/* View toggle */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.view-toggle button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #777;
+  background: #fff;
+  cursor: pointer;
+}
+.view-toggle button[aria-pressed="true"] {
+  background: #004466;
+  color: #fff;
+  border-color: #004466;
+}
+
+/* Members grid and list */
+#members.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+#members.list {
+  display: block;
+}
+.member-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  text-align: center;
+}
+.member-card .logo {
+  max-width: 120px;
+  margin: 0 auto 0.5rem;
+}
+.member-card h3 {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+}
+.member-card p {
+  margin: 0.25rem 0;
+  color: #333;
+}
+.member-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #004466;
+}
+
+/* membership badge */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.badge.level-3 {
+  background: linear-gradient(135deg,#FFD700,#FFC107);
+  color: #000;
+} /* gold */
+.badge.level-2 {
+  background: #c0c0c0;
+  color: #000;
+} /* silver */
+.badge.level-1 {
+  background: #e6e6e6;
+  color: #000;
+} /* member */
+
+/* List item style */
+#members.list .member-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-align: left;
+}
+#members.list .member-card .logo {
+  max-width: 80px;
+  margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .view-toggle {
+    justify-content: space-between;
+  }
+  #members.grid {
+    grid-template-columns: 1fr;
+  }
+  #members.list .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
