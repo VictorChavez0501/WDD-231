@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chamber Home | Guatemala City</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1>Guatemala City Chamber of Commerce</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="events.html">Events</a>
+        <a href="join.html" class="cta">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <img src="images/abc-hardware.png" alt="Hero: Business community" />
+      <div class="hero-text">
+        <h2>Supporting local businesses, building stronger communities.</h2>
+        <p>Discover member businesses, local events, and how to join the chamber.</p>
+        <p><a href="join.html" class="button">Join the Chamber</a></p>
+      </div>
+    </section>
+
+    <section id="current-events" class="card">
+      <h3>Current Events</h3>
+      <ul>
+        <li>October 5, 2025 — Small Business Workshop (Zona 10)</li>
+        <li>October 12, 2025 — Networking Breakfast (Zona 1)</li>
+      </ul>
+    </section>
+
+    <section id="weather" class="card">
+  <h3>Local Weather</h3>
+  <div id="weather-output">
+    <p>Temperature: <span id="temp">--</span></p>
+    <p>Humidity: <span id="humidity">--</span></p>
+    <p>Condition: <span id="condition">--</span></p>
+    <img id="weather-icon" src="" alt="" />
+  </div>
+  <h4>3-Day Forecast</h4>
+  <div id="forecast" class="forecast-container"></div>
+</section>
+
+
+    <section id="spotlights" class="card">
+      <h3>Member Spotlights</h3>
+      <div id="spotlight-container" class="spotlight-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Guatemala City Chamber of Commerce.</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
