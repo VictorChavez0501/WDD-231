@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chamber — Join</title>
+  <meta name="description" content="Join the chamber of commerce and help grow the local business community.">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .join-container{max-width:900px;margin:2rem auto;padding:1.5rem;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+    form .row{display:flex;gap:1rem;flex-wrap:wrap;}
+    label{display:block;font-weight:600;margin-bottom:0.25rem;}
+    input,select,textarea{width:100%;padding:0.6rem;border:1px solid #ddd;border-radius:6px;font-size:1rem;}
+    .hidden{display:none;}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0;}
+    .card{padding:1rem;border:1px solid #ddd;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.05);background:#fafafa;transition:transform .4s ease, box-shadow .4s ease;}
+    .card.animate{transform:scale(1.03);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;}
+    .modal-content{background:#fff;padding:1rem;border-radius:8px;max-width:400px;width:90%;}
+    .actions{display:flex;gap:1rem;margin-top:1rem;}
+    .btn{padding:0.6rem 1rem;border-radius:8px;cursor:pointer;border:0;}
+    .btn-primary{background:#2b7de9;color:white;}
+    .btn-secondary{background:#eee;color:#333;}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html" aria-current="page">Join</a>
+  </nav>
+</header>
+<main class="join-container">
+  <h1>Join the Chamber</h1>
+  <section>
+    <h2>Membership Levels</h2>
+    <div class="card-grid">
+      <div class="card" data-level="gold"><h3>Gold</h3><p>Featured listing and premium benefits</p><button type="button" class="btn btn-secondary show-modal">View Benefits</button></div>
+      <div class="card" data-level="silver"><h3>Silver</h3><p>Prominent listing and priority support</p><button type="button" class="btn btn-secondary show-modal">View Benefits</button></div>
+      <div class="card" data-level="bronze"><h3>Bronze</h3><p>Standard listing and basic benefits</p><button type="button" class="btn btn-secondary show-modal">View Benefits</button></div>
+      <div class="card" data-level="np"><h3>Non-Profit</h3><p>Special rate for non-profits</p><button type="button" class="btn btn-secondary show-modal">View Benefits</button></div>
+    </div>
+  </section>
+  <h2>Application Form</h2>
+  <form id="joinForm" action="thankyou.html" method="GET" novalidate>
+    <div class="row">
+      <div class="form-control">
+        <label for="firstName">First name *</label>
+        <input id="firstName" name="firstName" type="text" required title="Enter your first name" autocomplete="given-name">
+      </div>
+      <div class="form-control">
+        <label for="lastName">Last name *</label>
+        <input id="lastName" name="lastName" type="text" required title="Enter your last name" autocomplete="family-name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-control">
+        <label for="title">Title *</label>
+        <input id="title" name="title" type="text" required pattern="^[A-Za-z\-\s]{7,}$" title="At least 7 letters, hyphens and spaces only" autocomplete="organization-title">
+      </div>
+      <div class="form-control">
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required title="Enter a valid email" autocomplete="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-control">
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="text" autocomplete="tel">
+      </div>
+      <div class="form-control">
+        <label for="businessName">Business name *</label>
+        <input id="businessName" name="businessName" type="text" required title="Business name" autocomplete="organization">
+      </div>
+    </div>
+    <div class="form-control">
+      <label for="membership">Membership level *</label>
+      <select id="membership" name="membership" required title="Select membership" autocomplete="membership">
+        <option value="">-- Select level --</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+        <option value="np">Non-Profit</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label for="description">Short description</label>
+      <textarea id="description" name="description" rows="3" autocomplete="off"></textarea>
+    </div>
+    <input type="hidden" id="timestamp" name="timestamp" value="2025-09-26T22:57:28.581171">
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </div>
+  </form>
+</main>
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modal-title">Membership Benefits</h3>
+    <p id="modal-body"></p>
+    <button class="btn btn-primary" id="closeModal">Close</button>
+  </div>
+</div>
+<script src="js/join.js"></script>
+</body>
+</html>
