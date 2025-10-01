@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Site Plan — Lumina Seed</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Color schema – used throughout this document */
+    :root{
+      --accent-1: #0F4C81; /* deep blue – headings, nav */
+      --accent-2: #F7C948; /* warm gold – accents, buttons */
+      --bg: #FAFBFC;       /* page background */
+      --muted: #6B7280;    /* muted text */
+      --card: #FFFFFF;     /* card backgrounds */
+    }
+
+    /* Typography choices:
+       - Inter: body text and UI (readable)
+       - Playfair Display: headings and brand name
+    */
+    html,body{height:100%;}
+    body{
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #111827;
+      margin:0;
+      line-height:1.5;
+      padding:24px;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:20px;
+    }
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size:28px;
+      color:var(--accent-1);
+      font-weight:700;
+    }
+    .subtitle {color:var(--muted); font-size:0.95rem}
+
+    main{max-width:900px;margin:0 auto;}
+
+    section.plan-card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow: 0 6px 18px rgba(15,76,129,0.06);
+      padding:20px;
+      margin:18px 0;
+      border-left:6px solid var(--accent-2);
+    }
+
+    h2{font-family:"Playfair Display", serif;color:var(--accent-1);margin:0 0 8px 0;}
+    h3{margin:0 0 10px 0;color:var(--accent-1);font-size:1.05rem}
+    p.lead{color:var(--muted);margin-bottom:12px}
+
+    ul {margin:8px 0 12px 1.1rem}
+    code.patch{background:#F3F4F6;padding:2px 6px;border-radius:6px;font-size:0.9rem;color:#111827}
+
+    /* Wireframe visuals */
+    .wireframes{display:flex;gap:16px;flex-wrap:wrap}
+    .wf{
+      flex:1 1 320px;
+      border-radius:8px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border:1px dashed rgba(15,76,129,0.08);
+      padding:12px;
+      min-width:260px;
+    }
+    .wf .device{font-size:0.85rem;color:var(--muted);margin-bottom:8px}
+    .box{height:48px;border-radius:6px;background:#F8FAFC;border:2px dashed rgba(107,114,128,0.08);display:flex;align-items:center;justify-content:center;color:var(--muted);margin:8px 0}
+
+    /* small UI examples */
+    .palette{display:flex;gap:12px;align-items:center;margin:8px 0}
+    .chip{width:72px;height:48px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-weight:600}
+    .chip small{font-weight:400;font-size:0.75rem;opacity:0.95}
+    .palette .p1{background:var(--accent-1)} .palette .p2{background:var(--accent-2)}
+
+    /* responsive table-like list for typography */
+    .typography-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+    .typography-list div{background:#fff;padding:10px;border-radius:8px;border:1px solid rgba(15,76,129,0.03)}
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem;text-align:center}
+    .test-list{margin-top:10px}
+    .note{background:#fff8e6;border-left:4px solid var(--accent-2);padding:8px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">Lumina Seed</div>
+      <div class="subtitle">Project Site Plan — Individual WDD 231 assignment</div>
+    </header>
+
+    <section class="plan-card" id="overview">
+      <h2>Overview</h2>
+      <p class="lead">This document is the planning blueprint for <strong>Lumina Seed</strong> — a simple portfolio / product site for an app concept centered on a seed that evolves into light-based growth (branding concept). The plan covers site name rationale, purpose, user scenarios, color & typography, simple wireframes for mobile & desktop, CSS notes, and testing checklist.</p>
+    </section>
+
+    <section class="plan-card" id="site-name">
+      <h3>1. Site Name</h3>
+      <p><strong>Lumina Seed</strong></p>
+      <p>Reason: evokes the brand idea — a small seed that evolves and emits light. Suitable for an app, portfolio, or small product focused on growth, mindfulness, or creativity.</p>
+      <p class="lead"><strong>Optional domain:</strong> <code>lumina-seed.com</code> (representative)</p>
+    </section>
+
+    <section class="plan-card" id="purpose">
+      <h3>2. Site Purpose</h3>
+      <p>The site will present the Lumina concept and app features, showcase screenshots and the app's evolution story, and provide a call-to-action for downloads or contact. It will include:</p>
+      <ul>
+        <li>Home / hero with brand statement and CTA</li>
+        <li>Features / How it works section</li>
+        <li>Gallery / screenshots</li>
+        <li>About / story</li>
+        <li>Contact / download links</li>
+      </ul>
+    </section>
+
+    <section class="plan-card" id="scenarios">
+      <h3>3. Scenarios (target visitor questions)</h3>
+      <p>At least two scenarios to guide content:</p>
+      <ul>
+        <li><strong>Visitor:</strong> "What does the Lumina app do and how will it help me?" — Answer with clear features and short demo GIF or screenshots.</li>
+        <li><strong>Visitor:</strong> "How do I download or contact the developer?" — Provide download links and a contact form / email.</li>
+      </ul>
+    </section>
+
+    <section class="plan-card" id="colors">
+      <h3>4. Color Schema (applied on this document)</h3>
+      <p>The selected palette is applied on this page. Colors and usage:</p>
+      <div class="palette" aria-hidden="true">
+        <div class="chip p1">#0F4C81<small>Headings, nav</small></div>
+        <div class="chip p2">#F7C948<small>Buttons, accents</small></div>
+      </div>
+      <ul>
+        <li><strong>--accent-1 (#0F4C81):</strong> headings, links, primary nav.</li>
+        <li><strong>--accent-2 (#F7C948):</strong> CTA, highlights, card accents, buttons.</li>
+        <li><strong>--bg / --card:</strong> page and card backgrounds for high contrast and readability.</li>
+      </ul>
+      <p class="note">Note: The assignment required using the chosen color scheme on the plan itself — this page uses those exact colors.</p>
+    </section>
+
+    <section class="plan-card" id="typography">
+      <h3>5. Typography</h3>
+      <p>Selected fonts (1–3 fonts):</p>
+      <div class="typography-list" role="list">
+        <div>
+          <strong>Inter</strong>
+          <p style="font-family:Inter, system-ui, sans-serif;">Used for body text, UI, captions.</p>
+        </div>
+        <div>
+          <strong>Playfair Display</strong>
+          <p style="font-family:'Playfair Display', serif;">Used for brand headings and large titles.</p>
+        </div>
+      </div>
+      <p>Usage map:</p>
+      <ul>
+        <li><strong>Headings:</strong> Playfair Display (bold) — hero, section titles.</li>
+        <li><strong>Body:</strong> Inter regular (300–400) — paragraphs, lists.</li>
+      </ul>
+    </section>
+
+    <section class="plan-card" id="wireframe">
+      <h3>6. Wireframe (Home page)</h3>
+      <p>Below are simple wireframe sketches rendered as boxes. These are conceptual layouts — content can be replaced with final copy and images.</p>
+
+      <div class="wireframes" aria-hidden="true">
+        <div class="wf">
+          <div class="device">Mobile layout (portrait)</div>
+          <div class="box">Hero image / logo (mobile)</div>
+          <div class="box">Headline + short CTA</div>
+          <div class="box">Feature 1</div>
+          <div class="box">Feature 2</div>
+          <div class="box">Gallery (carousel)</div>
+          <div class="box">Contact / footer</div>
+        </div>
+
+        <div class="wf">
+          <div class="device">Desktop layout (larger)</div>
+          <div class="box" style="height:72px">Top nav (logo / links / CTA)</div>
+          <div class="box">Split hero – text left, image right</div>
+          <div class="box">3-column features row</div>
+          <div class="box">Gallery / screenshots</div>
+          <div class="box">About / contact footer</div>
+        </div>
+      </div>
+
+      <p class="lead">Wireframe notes: Keep nav compact, hero CTA visible on load, and ensure mobile first responsive layout using CSS flexbox or grid.</p>
+    </section>
+
+    <section class="plan-card" id="css">
+      <h3>CSS</h3>
+      <p>Supporting CSS notes:</p>
+      <ul>
+        <li>Use a single stylesheet (e.g. <code>styles.css</code>) or internal styles for this plan document. This plan uses styles embedded in the page to ensure the selected color scheme and typography are applied.</li>
+        <li>Responsive breakpoints: mobile-first then expand at 640px and 1024px.</li>
+        <li>Accessibility: use semantic HTML (header, nav, main, footer), proper headings, alt text for images.</li>
+      </ul>
+    </section>
+
+    <section class="plan-card" id="testing">
+      <h3>Testing</h3>
+      <p>Planned self-checks and validation tools:</p>
+      <ul class="test-list">
+        <li>HTML validation: W3C Markup Validation.</li>
+        <li>CSS validation: W3C CSS Validation service.</li>
+        <li>Color contrast: check headings and background using a contrast tool; ensure AA at minimum for body text.</li>
+        <li>Accessibility: run Lighthouse accessibility audit and manual keyboard navigation test.</li>
+        <li>Performance & SEO: check Lighthouse best-practices and SEO scores; optimize images and reduce large assets.</li>
+        <li>Cross-browser testing: Chrome, Firefox, Edge, and mobile devices (Android & iOS).</li>
+      </ul>
+      <p class="lead">Self-evaluation: After publishing, load the GitHub Pages URL and run Lighthouse in Chrome DevTools — fix any critical accessibility or performance issues before final submission.</p>
+    </section>
+
+    <section class="plan-card" id="submission">
+      <h3>Submission</h3>
+      <p>Instructions to submit:</p>
+      <ol>
+        <li>Save this file as <code>project-siteplan.html</code> in your `wdd231` repository (or inside a `week05/` folder).</li>
+        <li>Commit & push to GitHub (see commands above).</li>
+        <li>Confirm the page renders at <code>https://&lt;your-username&gt;.github.io/wdd231/project-siteplan.html</code> (or with `week05/` in path).</li>
+        <li>Return to Canvas and paste the working URL for grading.</li>
+      </ol>
+
+      <p class="note">If you put the file at `week05/project-siteplan.html` the URL will be:
+      <code>https://&lt;your-username&gt;.github.io/wdd231/week05/project-siteplan.html</code></p>
+    </section>
+
+    <footer>
+      © Lumina Seed — Project Site Plan • Document uses chosen color scheme and typography as required.
+    </footer>
+  </main>
+</body>
+</html>
