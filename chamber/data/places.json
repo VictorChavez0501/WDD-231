@@ -1,58 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Place 1",
-    "address": "101 Example St, Ciudad",
-    "description": "A short description of Place 1. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place1.webp"
+    "name": "ABC Hardware",
+    "address": "12 Market St, Ciudad",
+    "description": "A reliable local hardware store carrying tools, paint, and garden supplies for homeowners and businesses.",
+    "image": "../images/abc-hardware.webp"
   },
   {
     "id": 2,
-    "name": "Place 2",
-    "address": "102 Example St, Ciudad",
-    "description": "A short description of Place 2. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place2.webp"
+    "name": "City Café",
+    "address": "34 Plaza Ave, Ciudad",
+    "description": "A cozy café known for local pastries, fair-trade coffee, and community gatherings.",
+    "image": "../images/city-cafe.webp"
   },
   {
     "id": 3,
-    "name": "Place 3",
-    "address": "103 Example St, Ciudad",
-    "description": "A short description of Place 3. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place3.webp"
+    "name": "Elegant Florist",
+    "address": "7 Blossom Way, Ciudad",
+    "description": "Family-owned florist offering fresh arrangements for events and weekly deliveries.",
+    "image": "../images/elegant-florist.webp"
   },
   {
     "id": 4,
-    "name": "Place 4",
-    "address": "104 Example St, Ciudad",
-    "description": "A short description of Place 4. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place4.webp"
+    "name": "Green Leaf Grocers",
+    "address": "88 Green Rd, Ciudad",
+    "description": "Organic grocer featuring local produce, pantry staples, and sustainable products.",
+    "image": "../images/green-leaf.webp"
   },
   {
     "id": 5,
-    "name": "Place 5",
-    "address": "105 Example St, Ciudad",
-    "description": "A short description of Place 5. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place5.webp"
+    "name": "Happy Paws Vet",
+    "address": "21 Pet Lane, Ciudad",
+    "description": "Compassionate veterinary clinic providing preventive care and emergency services for pets.",
+    "image": "../images/happy-paws.webp"
   },
   {
     "id": 6,
-    "name": "Place 6",
-    "address": "106 Example St, Ciudad",
-    "description": "A short description of Place 6. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place6.webp"
+    "name": "Sunshine Fitness",
+    "address": "200 Health Blvd, Ciudad",
+    "description": "Community gym with group classes, personal trainers, and family membership plans.",
+    "image": "../images/sunshine-fitness.webp"
   },
   {
     "id": 7,
-    "name": "Place 7",
-    "address": "107 Example St, Ciudad",
-    "description": "A short description of Place 7. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place7.webp"
+    "name": "Tech Solutions",
+    "address": "400 Innovation Dr, Ciudad",
+    "description": "Local IT support and consulting for small businesses, offering managed services and training.",
+    "image": "../images/tech-solutions.webp"
   },
   {
     "id": 8,
-    "name": "Place 8",
-    "address": "108 Example St, Ciudad",
-    "description": "A short description of Place 8. This is a friendly, representative spot to visit or join for members.",
-    "image": "../images/place8.webp"
+    "name": "Elegant Florist Annex",
+    "address": "9 Blossom Way, Ciudad",
+    "description": "Seasonal pop-up from Elegant Florist with specialty bouquets and event prep.",
+    "image": "../images/elegant-florist.webp"
   }
 ]

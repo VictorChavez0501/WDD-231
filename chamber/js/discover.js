@@ -1,48 +1,61 @@
-// Build discover page: fetch data, render cards, manage last-visit localStorage message
+
+// discover.js - build the Discover page and manage last-visit messages using localStorage
 async function buildPage(){
-  try{
+  try {
     const resp = await fetch('../data/places.json');
-    const data = await resp.json();
-    const container = document.getElementById('cards');
-    data.forEach(item => {
-      const card = document.createElement('article');
-      card.className = 'card';
-      card.innerHTML = `
-        <h2>${item.name}</h2>
-        <figure><img src="${item.image}" alt="${item.name}"></figure>
-        <address>${item.address}</address>
-        <p>${item.description}</p>
-        <button aria-label="Learn more about ${item.name}">Learn more</button>
+    if(!resp.ok) throw new Error('Failed to load places.json');
+    const places = await resp.json();
+    const cards = document.getElementById('cards');
+    cards.innerHTML = ''; // clear
+
+    places.forEach(place => {
+      const art = document.createElement('article');
+      art.className = 'card';
+      art.innerHTML = `
+        <h2>${place.name}</h2>
+        <figure class="card-figure">
+          <img src="${place.image}" loading="lazy" alt="${place.name}">
+        </figure>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button class="learn" aria-label="Learn more about ${place.name}">Learn more</button>
       `;
-      container.appendChild(card);
+      cards.appendChild(art);
     });
-  }catch(e){
-    console.error('Failed to load places.json', e);
-    document.getElementById('cards').innerHTML = '<p>Failed to load content.</p>';
+  } catch (err) {
+    console.error(err);
+    const cards = document.getElementById('cards');
+    cards.textContent = 'Sorry — failed to load places.';
   }
 }
 
+// LocalStorage: last visit message
 function lastVisitMessage(){
-  const key = 'chamber-last-visit';
-  const sidebar = document.getElementById('visit-message');
+  const key = 'discover-last-visit';
   const now = Date.now();
+  const sidebar = document.getElementById('visitMsg');
   const prev = localStorage.getItem(key);
+
   if(!prev){
     sidebar.textContent = "Welcome! Let us know if you have any questions.";
-  }else{
-    const prevMs = Number(prev);
-    const diffDays = Math.floor((now - prevMs) / (1000*60*60*24));
-    if(diffDays < 1){
+  } else {
+    const prevNum = Number(prev);
+    const diffMs = now - prevNum;
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if(diffMs < (1000 * 60 * 60 * 24)){
       sidebar.textContent = "Back so soon! Awesome!";
-    }else if(diffDays === 1){
+    } else if(diffDays === 1){
       sidebar.textContent = "You last visited 1 day ago.";
-    }else{
+    } else {
       sidebar.textContent = `You last visited ${diffDays} days ago.`;
     }
   }
+
+  // store current visit
   localStorage.setItem(key, String(now));
 }
 
+// Init
 document.addEventListener('DOMContentLoaded', () => {
   buildPage();
   lastVisitMessage();
